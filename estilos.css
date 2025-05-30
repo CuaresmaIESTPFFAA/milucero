@@ -1,0 +1,183 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fffef9;
+  overflow-x: hidden;
+}
+
+.contenedor {
+  text-align: center;
+  padding: 2rem;
+}
+
+.foto {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin: 1rem 0;
+}
+
+.mensaje {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Galería de imágenes */
+.album {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.img-contenedor {
+  position: relative;
+  width: 200px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img-contenedor img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+
+/* Pie de foto visible (no editable) */
+.pie-texto {
+  margin-top: 0.4rem;
+  font-size: 0.9rem;
+  color: #444;
+  font-style: italic;
+  background-color: #f8f8f8;
+  padding: 4px 8px;
+  border-radius: 6px;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Pie editable */
+.input-texto {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  right: 5px;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 4px;
+  border-radius: 6px;
+}
+
+.input-texto input {
+  width: 100%;
+  border: none;
+  font-size: 0.9rem;
+  background: transparent;
+  outline: none;
+  color: #333;
+}
+
+/* Lluvia decorativa */
+.lluvia {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.gota {
+  position: absolute;
+  top: -100px;
+  width: 40px;
+  animation: caer 10s linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes caer {
+  to {
+    transform: translateY(120vh);
+  }
+}
+
+/* -------------------------------- */
+/* 🟨 Estilos responsivos para móvil */
+/* -------------------------------- */
+
+@media (max-width: 768px) {
+  .contenedor h1 {
+    font-size: 1.5rem;
+  }
+
+  .mensaje {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .img-contenedor {
+    width: 45vw;
+  }
+
+  .input-texto input {
+    font-size: 0.8rem;
+  }
+
+  .pie-texto {
+    font-size: 0.8rem;
+    padding: 3px 6px;
+  }
+
+  .gota {
+    width: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contenedor h1 {
+    font-size: 1.2rem;
+  }
+
+  .foto {
+    border-radius: 8px;
+  }
+
+  .img-contenedor {
+    width: 90vw;
+  }
+
+  .input-texto {
+    padding: 2px;
+  }
+
+  .input-texto input {
+    font-size: 0.75rem;
+  }
+
+  .pie-texto {
+    font-size: 0.75rem;
+  }
+}
+.audio-container {
+  text-align: center;
+  margin: 2rem auto;
+}
+
+.audio-container button {
+  background-color: #fddde6;
+  color: #333;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.audio-container button:hover {
+  background-color: #fac4d4;
+}
