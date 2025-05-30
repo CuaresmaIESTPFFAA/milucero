@@ -181,3 +181,19 @@ body {
 .audio-container button:hover {
   background-color: #fac4d4;
 }
+.mensaje-emotivo {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #fff7f7;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(255, 100, 100, 0.2);
+  font-family: 'Georgia', serif;
+  font-size: 1.1rem;
+  color: #a83232;
+  line-height: 1.6;
+  text-align: center;
+}
+.mensaje-emotivo p {
+  margin: 0.5rem 0;
+}
